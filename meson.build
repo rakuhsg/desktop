@@ -7,5 +7,5 @@ project('rawl', 'c',
 )
 
 executable('rawl',
-  'src/main.c',
+  'main.c',
 )
