@@ -15,13 +15,12 @@ int rw_server_init(rw_server_t *server) {
     if (wl_display_add_socket_auto(server->display) == NULL) {
         fprintf(stderr, "Failed to add Wayland socket\n");
         wl_display_destroy(server->display);
-        return EXIT_FAILURE;
+        return -1;
     }
 
     wl_display_run(server->display);
 
     wl_display_destroy(server->display);
-    return EXIT_SUCCESS;
 
     return 0;
 }
