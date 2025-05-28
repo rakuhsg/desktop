@@ -11,5 +11,6 @@ wayland_server_dep = dependency('wayland-server', version: '>= 1.12.0')
 executable('rawl',
   'main.c',
   'server.c',
+  'log.c',
   dependencies : [wayland_server_dep],
 )
